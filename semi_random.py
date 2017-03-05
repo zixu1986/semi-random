@@ -133,5 +133,5 @@ def get_semirandom_linear(h_prev, z_prev, d_in, d_out):
 
 def get_semirandom_square(h_prev, z_prev, d_in, d_out):
   z_curr = tf.nn.relu(get_linear_layer(z_prev, d_in, d_out, trainable=False))
-  h_curr = z_curr * get_linear_layer(h_prev, d_in, d_out, scale)
+  h_curr = z_curr * get_linear_layer(h_prev, d_in, d_out)
   return h_curr, z_curr
